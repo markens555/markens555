@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Möbius</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #111;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #4CAF50;
+    }
+
+    .main-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .sub-buttons {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .sub-buttons button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      border: none;
+      background-color: #10b981;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Mobius Logo" />
+    <h1>Bienvenue chez Möbius</h1>
+  </header>
+
+  <button class="main-btn" onclick="toggleButtons()">Menu</button>
+
+  <div class="sub-buttons" id="menu">
+    <button onclick="alert('Accueil')">Accueil</button>
+    <button onclick="alert('À propos')">À propos</button>
+    <button onclick="alert('Contact')">Contact</button>
+    <button onclick="alert('Projets')">Projets</button>
+  </div>
+
+  <footer>
+    Contact : <a href="mailto:mobius@email.com">mobius@email.com</a><br>
+    WhatsApp : <a href="https://wa.me/1234567890">Écrire sur WhatsApp</a>
+  </footer>
+
+  <script>
+    function toggleButtons() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
